@@ -1,0 +1,194 @@
+body {
+	background-color: #d5d5fd;
+	font-family: verdana;
+	overflow: hidden;
+}
+
+.private {
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.radioField {
+	display: flex;
+	list-style-type: none;
+	position: absolute;
+	bottom: 75px;
+	left: 49%;
+	transform: translate(-49%, 0%);
+}
+
+.radioField > li {
+	padding: 5px;
+	margin: 0;
+
+}
+
+li {
+	height: 1rem;
+}
+
+li > label {
+	position: relative;
+	top:-2.25rem;
+	margin: 5px;
+}
+
+li:nth-child(1):hover {
+	border-radius: 10px;
+	background-color: green;
+}
+
+li:nth-child(2):hover {
+	border-radius: 10px;
+	background-color: orange;
+}
+
+li:nth-child(3):hover {
+	border-radius: 10px;
+	background-color: red;
+}
+/*
+li:nth-child(1):active {
+	border-radius: 10px;
+	background-color: green;
+}
+li:nth-child(2):target {
+	border-radius: 10px;
+	background-color: orange;
+}
+
+li:nth-child(3):target {
+	border-radius: 10px;
+	background-color: red;
+}#priority-1:checked {
+	border-radius: 10px;
+	background-color: orange;
+}
+
+#priority-2:checked {
+	border-radius: 10px;
+	background-color: red;
+}
+*/
+li:nth-child(1) > input:checked + label {
+	border-radius: 5px;
+	background-color: green;
+}
+li:nth-child(2) > input:checked + label {
+	border-radius: 5px;
+	background-color: orange;
+}
+li:nth-child(3) > input:checked + label {
+	border-radius: 5px;
+	background-color: red;
+}
+
+
+#priority-0, #priority-1, #priority-2 {
+	opacity: 0;
+	width: 0;
+	height: 0;
+  	position: relative;
+  	cursor: pointer;
+}
+
+#text {
+	font-family:Arial;
+	bottom: 60px;
+	color:#666666;
+	font-weight: bold;
+}
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100px;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+
+h1 {
+  	text-align: center;
+}
+
+.textField {
+	background-color: transparent;
+	border: none;
+	font: normal 20px verdana;
+	margin-top: 15px;
+	margin-left: 110px;
+	width: 750px;
+	height: 1000px;
+	display: block;
+	overflow: hidden;
+}
+
+
+form {
+	background: url(http://i.stack.imgur.com/ynxjD.png) repeat-y;
+	width: 900px;
+	height: 1000px;
+	line-height: 30px;
+	padding: 2px 10px;
+	margin: 75px auto;
+	padding: 10px;
+
+	box-shadow:
+    /* The top layer shadow */
+    0 -1px 1px rgba(0,0,0,0.15),
+    /* The second layer */
+    0 -10px 0 -5px #e3e3bf,
+    /* The second layer shadow */
+    0 -10px 1px -4px rgba(0,0,0,0.15),
+     /* The third layer */
+    0 -20px 0 -10px #cacaaa,
+    /* The third layer shadow */
+    0 -20px 1px -9px rgba(0,0,0,0.15);
+}
+
+
+
+
+.container {
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 900px){
+
+
+	form > h1 {
+		font-size: 15px;
+	}
+	.container {
+		width: 80%;
+	}
+	.in {
+		margin: 0;
+	}
+}

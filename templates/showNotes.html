@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poznámkovník</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/showNotes.css">
+</head>
+<body>
+
+<div class="menu">
+    <a id="logout" href="/{{user}}/logout" class="myButton">{{logout}}</a>
+    <a id="prof" href="/{{user}}/profile" class="myButton">{{user}}</a>
+    <a id="login" href="/login" class="myButton">{{login}}</a>
+    <a id="reg" href="/register" class="myButton">{{register}}</a>
+    <h1>Poznámky</h1>
+</div>
+<div class="container">
+    <div class="flexBox">
+        {% for note in notes %}
+            <div class="noteFlex">
+                <div class="inf">
+                    <a id="del" href="/del/{{ note[0] }}">{{note[4][0]}}</a>
+                    <p>{{note[2]}}</p>
+                </div>
+                <p class="note">
+                    {% autoescape false %}
+                    {{note[1]}}
+                    {% endautoescape %}
+                </p>
+                <a id="edit" href="/poznamka/upravit/{{ note[0] }}">{{note[4][1]}}</a>
+                <span class="dot {{note[5]}}"></span>
+                    {% if note[3] == 1 %}
+                        <img id="lock" src="/static/Img/lock.png">
+                    {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+    <a class="myButton" id="addNote" href="/poznamka/vlozit">Vložit poznámku</a>
+</div>
+</body>
+</html>

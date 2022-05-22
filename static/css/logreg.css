@@ -1,0 +1,94 @@
+body {
+	background-color: black;
+	font-family: verdana;
+	color: white;
+}
+
+.myButton{
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:20px;
+	border:1px solid #dcdcdc;
+	display:block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: auto;
+	text-align: center;
+}
+
+.myButton:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+
+#loginFields {
+	position: fixed;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+#password {
+	border: 1px solid white;
+	border-radius: 20px;
+	height: 25px;
+	margin: 5px;
+}
+
+#username {
+	border: 1px solid white;
+	border-radius: 20px;
+	height: 25px;
+	margin: 5px;
+}
+
+#down {
+	position: absolute;
+	bottom: 20px;
+	display: table;
+	left:50%;
+	transform: translate(-50%, 0);
+}
+
+.container {
+  margin: auto;
+  overflow: hidden;
+}
+
+
+span {
+	text-align: center;
+	display: block;
+	color: red;
+}
+
+
+h1 {
+  	text-align: center;
+}
+
+@media screen and (max-width: 900px){
+	.flexBox {
+		width: 100%;
+	}
+
+	.container {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+	}
+}

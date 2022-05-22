@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poznámkovník</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/logreg.css">
+</head>
+<body>
+<div class="container">
+    <h1>Přihlášení</h1>
+    <form method="POST" action="/login">
+        {{ form.csrf_token}}
+        <div id="loginFields">
+            {{ form.username(id="username") }}
+            {{ form.password(id="password") }}
+            <br><br>
+            <input class="myButton" type="submit" value="Potvrdit">
+            <br><br>
+            <span>{{warn}}</span>
+        </div>
+        <a href="/" class="myButton" id="down">Poznámky</a>
+    </form>
+</div>
+</body>
+</html>
